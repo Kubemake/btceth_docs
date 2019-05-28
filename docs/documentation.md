@@ -27,7 +27,7 @@ Please enable the currencies there before using this API.
 {
    "success": true,
    "data": [
-       "yoc",
+       "eth",
        "eth"
    ]
 }
@@ -90,7 +90,7 @@ https://api.btceth.cc/eth/payment/?token=WKt2skCsqns6666666666CJv0m4DUkX&callbac
 	"block_number": 140,
 	"address": "0xf75574f061cd66666666666666666666666666f2",
 	"callback": "http://example.com/cb.php",
-	"blockchain": "yoc",
+	"blockchain": "eth",
 	"status": "complete",
 	"confirmations": 13,
 	"invoice": "d1ddf6e3767030b06666666eae403600",
@@ -186,13 +186,13 @@ Obtain information about currencies exchange rates against fiat from markets.
     "success": true,
     "data": {
         "USD": {
-            "YOC": {
+            "eth": {
                 "coinmarketcap": 0.0203020243,
                 "mid": 0.0203020243
             }
         },
         "EUR": {
-            "YOC": {
+            "eth": {
                 "coinmarketcap": 1.4806298998,
                 "mid": 1.4806298998
             }
@@ -211,7 +211,7 @@ You can use any online wallet, service or exchange of your choice.
 
 ![label: GET][~get]  /{crypto}/wallet/?token={token}
 
-**Example:** https://api.btceth.cc/yoc/wallet/?token=WKt2skCsqns6666666666CJv0m4DUkX
+**Example:** https://api.btceth.cc/eth/wallet/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
 **Headers:** Content-Type: application/json
 
@@ -233,7 +233,7 @@ You can use any online wallet, service or exchange of your choice.
             "max_confirmations": 3,
             "min_amount": null,
             "is_active": true,
-            "blockchain": "yoc"
+            "blockchain": "eth"
         }
     }
 }
@@ -251,11 +251,11 @@ Request withdrawal to cold wallet (You configure it in your cabinet)
 
  - Without callback: 
  
- https://api.btceth.cc/yoc/withdraw/?token=WKt2skCsqns6666666666CJv0m4DUkX
+ https://api.btceth.cc/eth/withdraw/?token=WKt2skCsqns6666666666CJv0m4DUkX
  
  - With callback: 
  
- https://api.btceth.cc/yoc/withdraw/http%3A%2F%2Fexample.com%2Fcb.php/?token=WKt2skCsqns6666666666CJv0m4DUkX
+ https://api.btceth.cc/eth/withdraw/http%3A%2F%2Fexample.com%2Fcb.php/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
 **Headers:** Content-Type: application/json
 
@@ -288,7 +288,7 @@ Request withdrawal to cold wallet (You configure it in your cabinet)
   "withdrawal": {
     "txid": "0x8e81cc436666666666666666643801d8f98d4d093c1e5381c031eb55048f92ed",
     "address": "0xf75574f061cd66666666666666666666666666f2",
-    "blockchain": "yoc",
+    "blockchain": "eth",
     "amount": "0.33",
     "callback": "http:/example.com/cb.php",
     "status": "complete",
@@ -315,7 +315,7 @@ Request withdrawal to cold wallet (You configure it in your cabinet)
     "data": {
         "txid": "0x8e81cc436666666666666666643801d8f98d4d093c1e5381c031eb55048f92ed",
         "address": "0xf75574f061cd66666666666666666666666666f2",
-        "blockchain": "yoc",
+        "blockchain": "eth",
         "amount": "0.33",
         "callback": "http:/example.com/cb.php",
         "status": "complete",

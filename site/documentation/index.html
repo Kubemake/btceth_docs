@@ -136,7 +136,7 @@ Please enable the currencies there before using this API.</p>
 <pre><code class="json">{
    &quot;success&quot;: true,
    &quot;data&quot;: [
-       &quot;yoc&quot;,
+       &quot;eth&quot;,
        &quot;eth&quot;
    ]
 }
@@ -178,7 +178,7 @@ Please enable the currencies there before using this API.</p>
     &quot;block_number&quot;: 140,
     &quot;address&quot;: &quot;0xf75574f061cd66666666666666666666666666f2&quot;,
     &quot;callback&quot;: &quot;http://example.com/cb.php&quot;,
-    &quot;blockchain&quot;: &quot;yoc&quot;,
+    &quot;blockchain&quot;: &quot;eth&quot;,
     &quot;status&quot;: &quot;complete&quot;,
     &quot;confirmations&quot;: 13,
     &quot;invoice&quot;: &quot;d1ddf6e3767030b06666666eae403600&quot;,
@@ -226,7 +226,7 @@ if ($data) {
     &quot;block_number&quot;: 140,
     &quot;address&quot;: &quot;0xf75574f061cd66666666666666666666666666f2&quot;,
     &quot;callback&quot;: &quot;http://example.com/cb.php&quot;,
-    &quot;blockchain&quot;: &quot;yoc&quot;,
+    &quot;blockchain&quot;: &quot;eth&quot;,
     &quot;status&quot;: &quot;complete&quot;,
     &quot;confirmations&quot;: 13,
     &quot;invoice&quot;: &quot;d1ddf6e3767030b06666666eae403600&quot;,
@@ -248,13 +248,13 @@ if ($data) {
     &quot;success&quot;: true,
     &quot;data&quot;: {
         &quot;USD&quot;: {
-            &quot;YOC&quot;: {
+            &quot;eth&quot;: {
                 &quot;coinmarketcap&quot;: 0.0203020243,
                 &quot;mid&quot;: 0.0203020243
             }
         },
         &quot;EUR&quot;: {
-            &quot;YOC&quot;: {
+            &quot;eth&quot;: {
                 &quot;coinmarketcap&quot;: 1.4806298998,
                 &quot;mid&quot;: 1.4806298998
             }
@@ -268,7 +268,7 @@ if ($data) {
 You can use any online wallet, service or exchange of your choice.</p>
 <h3 id="retrieve-wallet-balance">Retrieve wallet balance</h3>
 <p><img alt="label: GET" src="https://img.shields.io/badge/-GET-success.svg" />  /{crypto}/wallet/?token={token}</p>
-<p><strong>Example:</strong> https://api.btceth.cc/yoc/wallet/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
+<p><strong>Example:</strong> https://api.btceth.cc/eth/wallet/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
 <p><strong>Headers:</strong> Content-Type: application/json</p>
 <p><strong>Parameters:</strong>
  - token - API Secret Key
@@ -286,7 +286,7 @@ You can use any online wallet, service or exchange of your choice.</p>
             &quot;max_confirmations&quot;: 3,
             &quot;min_amount&quot;: null,
             &quot;is_active&quot;: true,
-            &quot;blockchain&quot;: &quot;yoc&quot;
+            &quot;blockchain&quot;: &quot;eth&quot;
         }
     }
 }
@@ -300,11 +300,11 @@ You can use any online wallet, service or exchange of your choice.</p>
 <ul>
 <li>Without callback: </li>
 </ul>
-<p>https://api.btceth.cc/yoc/withdraw/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
+<p>https://api.btceth.cc/eth/withdraw/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
 <ul>
 <li>With callback: </li>
 </ul>
-<p>https://api.btceth.cc/yoc/withdraw/http%3A%2F%2Fexample.com%2Fcb.php/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
+<p>https://api.btceth.cc/eth/withdraw/http%3A%2F%2Fexample.com%2Fcb.php/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
 <p><strong>Headers:</strong> Content-Type: application/json</p>
 <p><strong>Parameters:</strong>
  - token - API Secret Key
@@ -329,7 +329,7 @@ You can use any online wallet, service or exchange of your choice.</p>
   &quot;withdrawal&quot;: {
     &quot;txid&quot;: &quot;0x8e81cc436666666666666666643801d8f98d4d093c1e5381c031eb55048f92ed&quot;,
     &quot;address&quot;: &quot;0xf75574f061cd66666666666666666666666666f2&quot;,
-    &quot;blockchain&quot;: &quot;yoc&quot;,
+    &quot;blockchain&quot;: &quot;eth&quot;,
     &quot;amount&quot;: &quot;0.33&quot;,
     &quot;callback&quot;: &quot;http:/example.com/cb.php&quot;,
     &quot;status&quot;: &quot;complete&quot;,
@@ -349,7 +349,7 @@ You can use any online wallet, service or exchange of your choice.</p>
     &quot;data&quot;: {
         &quot;txid&quot;: &quot;0x8e81cc436666666666666666643801d8f98d4d093c1e5381c031eb55048f92ed&quot;,
         &quot;address&quot;: &quot;0xf75574f061cd66666666666666666666666666f2&quot;,
-        &quot;blockchain&quot;: &quot;yoc&quot;,
+        &quot;blockchain&quot;: &quot;eth&quot;,
         &quot;amount&quot;: &quot;0.33&quot;,
         &quot;callback&quot;: &quot;http:/example.com/cb.php&quot;,
         &quot;status&quot;: &quot;complete&quot;,
