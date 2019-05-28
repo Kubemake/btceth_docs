@@ -1,7 +1,5 @@
-# Introduction
-
-## Merchant Payment Gateway
-###### Introduction to Btceth and our payment gateway API for businesses
+# Merchant Payment Gateway
+__Introduction to Btceth and our payment gateway API for businesses__
 
 
 Btceth is a blockchain payment processor, established in 2018. Currently, we support Bitcoin, Ethereum and others. Our mission is to grow adoption of cryptocurrencies on a global scale by laying out a reliable payments infrastructure that caters for the needs of both merchants and their customers: accessible, convenient and customer oriented.

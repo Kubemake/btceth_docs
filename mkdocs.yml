@@ -1,1 +1,5 @@
-site_name: My Docs
+site_name: BTCETH
+nav:
+  - Introduction: index.md
+  - Documentation: documentation.md
+theme: readthedocs

@@ -1,8 +1,6 @@
-# Documentation
+# Api Overview
 
-## Api Overview
-
-###### This API allows to accept <b>cryptocurencies</b> payments. More details can be found on our website: https://btceth.cc/
+__This API allows to accept <b>cryptocurencies</b> payments. More details can be found on our website: http://btceth.cc__
 
 #### API Keys
 In order to use the system you need an API key. Getting a key is free and easy, sign up here:
@@ -12,11 +10,9 @@ https://btceth.cc
 Once registered, you can manage the currencies you want to integrate in the Membership area / Currencies. 
 Please enable the currencies there before using this API.
 
-## API Resources
+### Get a list of enabled currencies.
 
-
-### GET /currencies/?token={token}
-Get a list of enabled currencies.
+![label: GET][~get] */currencies/?token={token}*
 
 **Example:** https://api.btceth.cc/currencies/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
@@ -36,16 +32,22 @@ Get a list of enabled currencies.
 }
 ```
 
+### Create payment request
 
-### GET /{crypto}/payment/?token={token}
-### GET /{crypto}/payment/{callback_url}/?token={token}
+![label: GET][~get]  */{crypto}/payment/?token={token}*
 
-Create payment request
+![label: GET][~get]  */{crypto}/payment/?callback={callback_url}&token={token}*
+
 
 **Examples:**
- - Without callback: 
-  https://api.btceth.cc/yoc/payment/?token=WKt2skCsqns6666666666CJv0m4DUkX
- - With callback: https://api.btceth.cc/yoc/payment/http%3A%2F%2Fexample.com%2Fcb.php/?token=WKt2skCsqns6666666666CJv0m4DUkX
+
+Without callback: 
+
+https://api.btceth.cc/eth/payment/?token=WKt2skCsqns6666666666CJv0m4DUkX
+
+With callback: 
+
+https://api.btceth.cc/eth/payment/?token=WKt2skCsqns6666666666CJv0m4DUkX&callback=https://example.com/cb.php
 
 **Headers:** Content-Type: application/json
 
@@ -70,28 +72,6 @@ Create payment request
         "address": "0xf75574f061cd66666666666666666666666666f2"
     }
 }
-```
-
-**PHP example:**
-
-```php
-require('yopay.php');
-
-define('API_SECRET', 'your_secret_from_cabinet');
-define('API_URL', 'https://api.btceth.cc/');
-
-$yo = new YopayApi(API_SECRET, API_URL);
-
-$orderId = 123;
-$callback = 'http://example.com/yopay/callback.php?orderId=' . $orderId;
-
-$address = $yo->getAddress($callback);
-
-if ($address['success'] == false) die('Error: ' . $address['error']);
-$data = $address['data'];
-$invoiceId = $data['invoice']; //save it where you need
-
-die('Please send your coins to address: ' . $data['address']);
 ```
 
 **Callback example:**
@@ -140,9 +120,11 @@ if ($data) {
 ```
 
 
-### GET /invoice/{invoice}/?token={token}
+### Get Invoice Info and Status 
 
-Get Invoice Info and Status. Obtain information about invoice which already stop sent callback requests
+![label: GET][~get]  */invoice/{invoice}/?token={token}*
+
+Obtain information about invoice which already stop sent callback requests
 
 **Example:** https://api.btceth.cc/invoice/d1ddf6e3767030b06666666eae403600/?token=WKt2skCsqns6666666666CJv0m4DUkX 
 
@@ -173,9 +155,11 @@ Get Invoice Info and Status. Obtain information about invoice which already stop
 ```
 
 
-### GET /rates/{fiat}/?token={token} 
+### Get Currencies exchange rates
 
-Get Currencies exchange rates. Obtain information about currencies exchange rates against fiat from markets.
+![label: GET][~get]  */rates/{fiat}/?token={token}* 
+
+Obtain information about currencies exchange rates against fiat from markets.
 
 **Example:** https://api.btceth.cc/rates/usd/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
@@ -215,9 +199,9 @@ You will need payout addresses for all crypto currencies you want to accept. Onl
 You can use any online wallet, service or exchange of your choice.
 
 
-### GET /{crypto}/wallet/?token={token}
+### Retrieve wallet balance
 
-Retrieve wallet balance
+![label: GET][~get]  /{crypto}/wallet/?token={token}
 
 **Example:** https://api.btceth.cc/yoc/wallet/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
@@ -247,15 +231,23 @@ Retrieve wallet balance
 }
 ```
 
+### Request withdrawal to cold wallet
 
-### POST /yoc/withdraw/?token={token}
-### POST /yoc/withdraw/{callback_url}/?token={token}
+![label: POST][~post]  */eth/withdraw/?token={token}*
+
+![label: POST][~post]  */eth/withdraw/{callback_url}/?token={token}*
 
 Request withdrawal to cold wallet (You configure it in your cabinet)
 
 **Examples:** 
- - Without callback: https://api.btceth.cc/yoc/withdraw/?token=WKt2skCsqns6666666666CJv0m4DUkX
- - With callback: https://api.btceth.cc/yoc/withdraw/http%3A%2F%2Fexample.com%2Fcb.php/?token=WKt2skCsqns6666666666CJv0m4DUkX
+
+ - Without callback: 
+ 
+ https://api.btceth.cc/yoc/withdraw/?token=WKt2skCsqns6666666666CJv0m4DUkX
+ 
+ - With callback: 
+ 
+ https://api.btceth.cc/yoc/withdraw/http%3A%2F%2Fexample.com%2Fcb.php/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
 **Headers:** Content-Type: application/json
 
@@ -299,9 +291,9 @@ Request withdrawal to cold wallet (You configure it in your cabinet)
 ```
 
 
-### GET /withdraw/{withdraw}/?token={token}
+### Retrieve withdrawal details
 
-Retrieve withdrawal details
+![label: GET][~get]  */withdraw/{withdraw}/?token={token}*
 
 **Example:** https://api.btceth.cc/withdraw/5b13c41166666fff666666e7/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
@@ -330,3 +322,6 @@ Before usage:
 Open settings and populate password and upload you json file
 toggle api access on
 
+
+[~get]: https://img.shields.io/badge/-GET-success.svg
+[~post]: https://img.shields.io/badge/-POST-blue.svg
