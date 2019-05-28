@@ -1,12 +1,13 @@
 # Api Overview
 
-__This API allows to accept <b>cryptocurencies</b> payments. More details can be found on our website: http://btceth.cc__
+This is a tool for integration with BTCETH - for developers. Allows you to accept crypto payments, learn about the status of operations and much more.
+This document contains descriptions of the main scenarios with code examples. All information about the query structure, objects and variables is in the API reference book.
+To accept payment, you need only a few lines of code. Let's go 🚀
 
-#### API Keys
-In order to use the system you need an API key. Getting a key is free and easy, sign up here:
-https://btceth.cc
+### Quick Start 
 
-#### Multiple Currencies
+To start working with BTCETH, you need to register and get access to your personal account. To authenticate requests to the API, you need the secret key from your personal account.
+
 Once registered, you can manage the currencies you want to integrate in the Membership area / Currencies. 
 Please enable the currencies there before using this API.
 
@@ -33,6 +34,9 @@ Please enable the currencies there before using this API.
 ```
 
 ### Create payment request
+
+
+Payment is the main essence of the BTCETH API. To create it, you will need the token and URL to which the confirmation will be returned after payment.
 
 ![label: GET][~get]  */{crypto}/payment/?token={token}*
 
@@ -122,6 +126,9 @@ if ($data) {
 
 ### Get Invoice Info and Status 
 
+A payment can be considered successful as soon as it has moved to the complete status. If the user changes his mind to pay or something goes wrong, the payment will go to status failed.
+To find out the status of a payment, you can request information about a payment at a frequency convenient for you. To do this, you will need the payment identifier {invoice} (the value of the id parameter in the created payment object).
+
 ![label: GET][~get]  */invoice/{invoice}/?token={token}*
 
 Obtain information about invoice which already stop sent callback requests
@@ -146,7 +153,7 @@ Obtain information about invoice which already stop sent callback requests
     "block_number": 140,
     "address": "0xf75574f061cd66666666666666666666666666f2",
     "callback": "http://example.com/cb.php",
-    "blockchain": "yoc",
+    "blockchain": "eth",
     "status": "complete",
     "confirmations": 13,
     "invoice": "d1ddf6e3767030b06666666eae403600",
@@ -154,6 +161,7 @@ Obtain information about invoice which already stop sent callback requests
 }
 ```
 
+**Gongratulation, you accepted the first payment!**
 
 ### Get Currencies exchange rates
 
