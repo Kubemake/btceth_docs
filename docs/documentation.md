@@ -28,7 +28,7 @@ Please enable the currencies there before using this API.
    "success": true,
    "data": [
        "eth",
-       "eth"
+       "btc"
    ]
 }
 ```
