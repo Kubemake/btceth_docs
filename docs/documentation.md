@@ -15,7 +15,7 @@ Please enable the currencies there before using this API.
 
 ![label: GET][~get] */currencies/?token={token}*
 
-**Example:** https://api.btceth.cc/currencies/?token=WKt2skCsqns6666666666CJv0m4DUkX
+**Example:** https://api.yopay.tech/currencies/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
 **Headers:** Content-Type: application/json
 
@@ -47,11 +47,11 @@ Payment is the main essence of the BTCETH API. To create it, you will need the t
 
 Without callback: 
 
-https://api.btceth.cc/eth/payment/?token=WKt2skCsqns6666666666CJv0m4DUkX
+https://api.yopay.tech/eth/payment/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
 With callback: 
 
-https://api.btceth.cc/eth/payment/?token=WKt2skCsqns6666666666CJv0m4DUkX&callback=https://example.com/cb.php
+https://api.yopay.tech/eth/payment/?token=WKt2skCsqns6666666666CJv0m4DUkX&callback=https://example.com/cb.php
 
 **Headers:** Content-Type: application/json
 
@@ -133,7 +133,7 @@ To find out the status of a payment, you can request information about a payment
 
 Obtain information about invoice which already stop sent callback requests
 
-**Example:** https://api.btceth.cc/invoice/d1ddf6e3767030b06666666eae403600/?token=WKt2skCsqns6666666666CJv0m4DUkX 
+**Example:** https://api.yopay.tech/invoice/d1ddf6e3767030b06666666eae403600/?token=WKt2skCsqns6666666666CJv0m4DUkX 
 
 **Headers:** Content-Type: application/json
 
@@ -169,7 +169,7 @@ Obtain information about invoice which already stop sent callback requests
 
 Obtain information about currencies exchange rates against fiat from markets.
 
-**Example:** https://api.btceth.cc/rates/usd/?token=WKt2skCsqns6666666666CJv0m4DUkX
+**Example:** https://api.yopay.tech/rates/usd/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
 **Headers:** Content-Type: application/json
 
@@ -211,7 +211,7 @@ You can use any online wallet, service or exchange of your choice.
 
 ![label: GET][~get]  /{crypto}/wallet/?token={token}
 
-**Example:** https://api.btceth.cc/eth/wallet/?token=WKt2skCsqns6666666666CJv0m4DUkX
+**Example:** https://api.yopay.tech/eth/wallet/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
 **Headers:** Content-Type: application/json
 
@@ -251,11 +251,11 @@ Request withdrawal to cold wallet (You configure it in your cabinet)
 
  - Without callback: 
  
- https://api.btceth.cc/eth/withdraw/?token=WKt2skCsqns6666666666CJv0m4DUkX
+ https://api.yopay.tech/eth/withdraw/?token=WKt2skCsqns6666666666CJv0m4DUkX
  
  - With callback: 
  
- https://api.btceth.cc/eth/withdraw/http%3A%2F%2Fexample.com%2Fcb.php/?token=WKt2skCsqns6666666666CJv0m4DUkX
+ https://api.yopay.tech/eth/withdraw/http%3A%2F%2Fexample.com%2Fcb.php/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
 **Headers:** Content-Type: application/json
 
@@ -303,7 +303,7 @@ Request withdrawal to cold wallet (You configure it in your cabinet)
 
 ![label: GET][~get]  */withdraw/{withdraw}/?token={token}*
 
-**Example:** https://api.btceth.cc/withdraw/5b13c41166666fff666666e7/?token=WKt2skCsqns6666666666CJv0m4DUkX
+**Example:** https://api.yopay.tech/withdraw/5b13c41166666fff666666e7/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
 **Headers:** Content-Type: application/json
 
