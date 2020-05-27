@@ -1,12 +1,12 @@
 # Api Overview
 
-This is a tool for integration with BTCETH - for developers. Allows you to accept crypto payments, learn about the status of operations and much more.
+This is a tool for integration with yopay.tech - for developers. Allows you to accept crypto payments, learn about the status of operations and much more.
 This document contains descriptions of the main scenarios with code examples. All information about the query structure, objects and variables is in the API reference book.
 To accept payment, you need only a few lines of code. Let's go 🚀
 
 ### Quick Start 
 
-To start working with BTCETH, you need to register and get access to your personal account. To authenticate requests to the API, you need the secret key from your personal account.
+To start working with yopay.tech, you need to register and get access to your personal account. To authenticate requests to the API, you need the secret key from your personal account.
 
 Once registered, you can manage the currencies you want to integrate in the Membership area / Currencies. 
 Please enable the currencies there before using this API.
@@ -36,7 +36,7 @@ Please enable the currencies there before using this API.
 ### Create payment request
 
 
-Payment is the main essence of the BTCETH API. To create it, you will need the token and URL to which the confirmation will be returned after payment.
+Payment is the main essence of the yopay.tech API. To create it, you will need the token and URL to which the confirmation will be returned after payment.
 
 ![label: GET][~get]  */{crypto}/payment/?token={token}*
 
