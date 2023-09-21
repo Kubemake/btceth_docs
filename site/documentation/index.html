@@ -8,7 +8,7 @@
 
 
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Documentation - yopay.tech</title>
+  <title>Documentation - yopay.org</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -36,7 +36,7 @@
 
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> yopay.tech</a>
+        <a href=".." class="icon icon-home"> yopay.org</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -96,7 +96,7 @@
 
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">yopay.tech</a>
+        <a href="..">yopay.org</a>
       </nav>
 
 
@@ -119,16 +119,16 @@
             <div class="section">
 
                 <h1 id="api-overview">Api Overview</h1>
-<p><strong>This API allows to accept <b>cryptocurencies</b> payments. More details can be found on our website: https://yopay.tech</strong></p>
+<p><strong>This API allows to accept <b>cryptocurencies</b> payments. More details can be found on our website: https://yopay.org</strong></p>
 <h4 id="api-keys">API Keys</h4>
 <p>In order to use the system you need an API key. Getting a key is free and easy, sign up here:
-https://yopay.tech</p>
+https://yopay.org</p>
 <h4 id="multiple-currencies">Multiple Currencies</h4>
 <p>Once registered, you can manage the currencies you want to integrate in the Membership area / Currencies.
 Please enable the currencies there before using this API.</p>
 <h3 id="get-a-list-of-enabled-currencies">Get a list of enabled currencies.</h3>
 <p><img alt="label: GET" src="https://img.shields.io/badge/-GET-success.svg" /> <em>/currencies/?token={token}</em></p>
-<p><strong>Example:</strong> https://api.yopay.tech/currencies/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
+<p><strong>Example:</strong> https://api.yopay.org/currencies/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
 <p><strong>Headers:</strong> Content-Type: application/json</p>
 <p><strong>Parameters:</strong>
  - token - API Secret Key</p>
@@ -147,9 +147,9 @@ Please enable the currencies there before using this API.</p>
 <p><img alt="label: GET" src="https://img.shields.io/badge/-GET-success.svg" />  <em>/{crypto}/payment/?callback={callback_url}&amp;token={token}</em></p>
 <p><strong>Examples:</strong></p>
 <p>Without callback: </p>
-<p>https://api.yopay.tech/eth/payment/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
+<p>https://api.yopay.org/eth/payment/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
 <p>With callback: </p>
-<p>https://api.yopay.tech/eth/payment/?token=WKt2skCsqns6666666666CJv0m4DUkX&amp;callback=https://example.com/cb.php</p>
+<p>https://api.yopay.org/eth/payment/?token=WKt2skCsqns6666666666CJv0m4DUkX&amp;callback=https://example.com/cb.php</p>
 <p><strong>Headers:</strong> Content-Type: application/json</p>
 <p><strong>Parameters:</strong>
  - token - API Secret Key
@@ -212,7 +212,7 @@ if ($data) {
 <h3 id="get-invoice-info-and-status">Get Invoice Info and Status</h3>
 <p><img alt="label: GET" src="https://img.shields.io/badge/-GET-success.svg" />  <em>/invoice/{invoice}/?token={token}</em></p>
 <p>Obtain information about invoice which already stop sent callback requests</p>
-<p><strong>Example:</strong> https://api.yopay.tech/invoice/d1ddf6e3767030b06666666eae403600/?token=WKt2skCsqns6666666666CJv0m4DUkX </p>
+<p><strong>Example:</strong> https://api.yopay.org/invoice/d1ddf6e3767030b06666666eae403600/?token=WKt2skCsqns6666666666CJv0m4DUkX </p>
 <p><strong>Headers:</strong> Content-Type: application/json</p>
 <p><strong>Parameters:</strong>
  - token - API Secret Key
@@ -237,7 +237,7 @@ if ($data) {
 <h3 id="get-currencies-exchange-rates">Get Currencies exchange rates</h3>
 <p><img alt="label: GET" src="https://img.shields.io/badge/-GET-success.svg" />  <em>/rates/{fiat}/?token={token}</em> </p>
 <p>Obtain information about currencies exchange rates against fiat from markets.</p>
-<p><strong>Example:</strong> https://api.yopay.tech/rates/usd/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
+<p><strong>Example:</strong> https://api.yopay.org/rates/usd/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
 <p><strong>Headers:</strong> Content-Type: application/json</p>
 <p><strong>Parameters:</strong>
  - token - API Secret Key
@@ -268,7 +268,7 @@ if ($data) {
 You can use any online wallet, service or exchange of your choice.</p>
 <h3 id="retrieve-wallet-balance">Retrieve wallet balance</h3>
 <p><img alt="label: GET" src="https://img.shields.io/badge/-GET-success.svg" />  /{crypto}/wallet/?token={token}</p>
-<p><strong>Example:</strong> https://api.yopay.tech/eth/wallet/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
+<p><strong>Example:</strong> https://api.yopay.org/eth/wallet/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
 <p><strong>Headers:</strong> Content-Type: application/json</p>
 <p><strong>Parameters:</strong>
  - token - API Secret Key
@@ -300,11 +300,11 @@ You can use any online wallet, service or exchange of your choice.</p>
 <ul>
 <li>Without callback: </li>
 </ul>
-<p>https://api.yopay.tech/eth/withdraw/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
+<p>https://api.yopay.org/eth/withdraw/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
 <ul>
 <li>With callback: </li>
 </ul>
-<p>https://api.yopay.tech/eth/withdraw/http%3A%2F%2Fexample.com%2Fcb.php/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
+<p>https://api.yopay.org/eth/withdraw/http%3A%2F%2Fexample.com%2Fcb.php/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
 <p><strong>Headers:</strong> Content-Type: application/json</p>
 <p><strong>Parameters:</strong>
  - token - API Secret Key
@@ -341,7 +341,7 @@ You can use any online wallet, service or exchange of your choice.</p>
 
 <h3 id="retrieve-withdrawal-details">Retrieve withdrawal details</h3>
 <p><img alt="label: GET" src="https://img.shields.io/badge/-GET-success.svg" />  <em>/withdraw/{withdraw}/?token={token}</em></p>
-<p><strong>Example:</strong> https://api.yopay.tech/withdraw/5b13c41166666fff666666e7/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
+<p><strong>Example:</strong> https://api.yopay.org/withdraw/5b13c41166666fff666666e7/?token=WKt2skCsqns6666666666CJv0m4DUkX</p>
 <p><strong>Headers:</strong> Content-Type: application/json</p>
 <p><strong>Response body:</strong></p>
 <pre><code class="json">{

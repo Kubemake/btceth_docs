@@ -1,12 +1,12 @@
 # Api Overview
 
-This is a tool for integration with yopay.tech - for developers. Allows you to accept crypto payments, learn about the status of operations and much more.
+This is a tool for integration with yopay.org - for developers. Allows you to accept crypto payments, learn about the status of operations and much more.
 This document contains descriptions of the main scenarios with code examples. All information about the query structure, objects and variables is in the API reference book.
 To accept payment, you need only a few lines of code. Let's go 🚀
 
 ### Quick Start 
 
-To start working with yopay.tech, you need to register and get access to your personal account. To authenticate requests to the API, you need the secret key from your personal account.
+To start working with yopay.org, you need to register and get access to your personal account. To authenticate requests to the API, you need the secret key from your personal account.
 
 Once registered, you can manage the currencies you want to integrate in the Membership area / Currencies. 
 Please enable the currencies there before using this API.
@@ -15,7 +15,7 @@ Please enable the currencies there before using this API.
 
 ![label: GET][~get] */currencies/?token={token}*
 
-**Example:** https://api.yopay.tech/currencies/?token=WKt2skCsqns6666666666CJv0m4DUkX
+**Example:** https://api.yopay.org/currencies/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
 **Headers:** Content-Type: application/json
 
@@ -36,7 +36,7 @@ Please enable the currencies there before using this API.
 ### Create payment request
 
 
-Payment is the main essence of the yopay.tech API. To create it, you will need the token and URL to which the confirmation will be returned after payment.
+Payment is the main essence of the yopay.org API. To create it, you will need the token and URL to which the confirmation will be returned after payment.
 
 ![label: GET][~get]  */{crypto}/payment/?token={token}*
 
@@ -47,11 +47,11 @@ Payment is the main essence of the yopay.tech API. To create it, you will need t
 
 Without callback: 
 
-https://api.yopay.tech/eth/payment/?token=WKt2skCsqns6666666666CJv0m4DUkX
+https://api.yopay.org/eth/payment/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
 With callback: 
 
-https://api.yopay.tech/eth/payment/?token=WKt2skCsqns6666666666CJv0m4DUkX&callback=https://example.com/cb.php
+https://api.yopay.org/eth/payment/?token=WKt2skCsqns6666666666CJv0m4DUkX&callback=https://example.com/cb.php
 
 **Headers:** Content-Type: application/json
 
@@ -133,7 +133,7 @@ To find out the status of a payment, you can request information about a payment
 
 Obtain information about invoice which already stop sent callback requests
 
-**Example:** https://api.yopay.tech/invoice/d1ddf6e3767030b06666666eae403600/?token=WKt2skCsqns6666666666CJv0m4DUkX 
+**Example:** https://api.yopay.org/invoice/d1ddf6e3767030b06666666eae403600/?token=WKt2skCsqns6666666666CJv0m4DUkX 
 
 **Headers:** Content-Type: application/json
 
@@ -169,7 +169,7 @@ Obtain information about invoice which already stop sent callback requests
 
 Obtain information about currencies exchange rates against fiat from markets.
 
-**Example:** https://api.yopay.tech/rates/usd/?token=WKt2skCsqns6666666666CJv0m4DUkX
+**Example:** https://api.yopay.org/rates/usd/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
 **Headers:** Content-Type: application/json
 
@@ -211,7 +211,7 @@ You can use any online wallet, service or exchange of your choice.
 
 ![label: GET][~get]  /{crypto}/wallet/?token={token}
 
-**Example:** https://api.yopay.tech/eth/wallet/?token=WKt2skCsqns6666666666CJv0m4DUkX
+**Example:** https://api.yopay.org/eth/wallet/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
 **Headers:** Content-Type: application/json
 
@@ -251,11 +251,11 @@ Request withdrawal to cold wallet (You configure it in your cabinet)
 
  - Without callback: 
  
- https://api.yopay.tech/eth/withdraw/?token=WKt2skCsqns6666666666CJv0m4DUkX
+ https://api.yopay.org/eth/withdraw/?token=WKt2skCsqns6666666666CJv0m4DUkX
  
  - With callback: 
  
- https://api.yopay.tech/eth/withdraw/http%3A%2F%2Fexample.com%2Fcb.php/?token=WKt2skCsqns6666666666CJv0m4DUkX
+ https://api.yopay.org/eth/withdraw/http%3A%2F%2Fexample.com%2Fcb.php/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
 **Headers:** Content-Type: application/json
 
@@ -303,7 +303,7 @@ Request withdrawal to cold wallet (You configure it in your cabinet)
 
 ![label: GET][~get]  */withdraw/{withdraw}/?token={token}*
 
-**Example:** https://api.yopay.tech/withdraw/5b13c41166666fff666666e7/?token=WKt2skCsqns6666666666CJv0m4DUkX
+**Example:** https://api.yopay.org/withdraw/5b13c41166666fff666666e7/?token=WKt2skCsqns6666666666CJv0m4DUkX
 
 **Headers:** Content-Type: application/json
 

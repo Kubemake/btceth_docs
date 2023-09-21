@@ -1,4 +1,4 @@
-site_name: yopay.tech
+site_name: yopay.org
 nav:
   - Introduction: index.md
   - Documentation: documentation.md
